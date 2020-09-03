@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        </head>
+            <body>
+                <div class="container">
+                    <h1 class=>Table de commandes</h1>
+                </div>               
+                <section id="table-section">
+                <div id="table-ctrl"class="container">
+                
+                    <table class="table table-dark">
+                        <thead>
+                            <th scope="col">#</th>
+                            <th scope="col">Commande</th>
+                            <th scope="col">Date de la commande</th>
+                            <th scope="col">Date de la livraison</th>
+                            <th scope="col">Statut</th>
+                        </thead>
+                        <tbody>                                 
+                            <?php foreach($q as $order):?>
+                                <tr>
+                                    <th scope="row"><?= $d?></th>
+                                        <td><?= $order['orderNumber']?></td>
+                                        <td><?= $order['orderDate']?></td>
+                                        <td><?= $order['shippedDate']?></td>
+                                        <td><?= $order['status']?></td>
+                                    <?php $d++?>
+                                </tr>
+                            <?php endforeach ?>                                                           
+                        </tbody>
+                    </table>
+                <div>
+                </section>
+                
+            </body>
+
+    </html>
+
